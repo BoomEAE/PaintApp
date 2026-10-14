@@ -49,8 +49,8 @@
                   </VBox>
                </content>
             </TitledPane>
-            <Button fx:id="undoBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Undo" />
-            <Button fx:id="clearBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Clear" />
+            <Button fx:id="undoBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#undoButtonPressed" text="Undo" />
+            <Button fx:id="clearBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearButtonPressed" text="Clear" />
          </children>
       </VBox>
    </left>

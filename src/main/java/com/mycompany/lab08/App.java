@@ -1,5 +1,7 @@
 package com.mycompany.lab08;
 
+//Github repo: https://github.com/BoomEAE/PaintApp.git
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +12,7 @@ import java.io.IOException;
 
 /**
  * JavaFX App
+ * @author Eric Andre Evsei
  */
 public class App extends Application {
 

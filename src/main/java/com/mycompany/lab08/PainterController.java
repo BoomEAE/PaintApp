@@ -4,6 +4,8 @@
  */
 package com.mycompany.lab08;
 
+//Github repo: https://github.com/BoomEAE/PaintApp.git
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.ObservableList;
@@ -24,10 +26,11 @@ import javafx.scene.shape.Circle;
 /**
  * FXML Controller class
  *
- * @author 2539556
+ * @author Eric Andre Evsei
  */
 public class PainterController implements Initializable {
     
+    //enum for the different pen sizes
     private enum PenSize {
     SMALL(2),
     MEDIUM(4),
@@ -86,14 +89,14 @@ public class PainterController implements Initializable {
     
     @FXML
     private void colorRadioButtonSelected(ActionEvent event) {
-        //
+        //We get the radioButton that as been toggled and we take its data and set the brush color
         Toggle toggle = colorToggleGroup.getSelectedToggle();
         brushColor = (Color)toggle.getUserData();
     }
 
     @FXML
     private void sizeRadioButtonSelected(ActionEvent event) {
-        //
+        //We get the radioButton that as been toggled and we set the chosen pen size
         Toggle toggle = sizeToggleGroup.getSelectedToggle();
         radius = (PenSize)toggle.getUserData();
     }
@@ -112,9 +115,8 @@ public class PainterController implements Initializable {
 
     @FXML
     private void drawingAreaMouseDragged(MouseEvent event) {
-        //
+        //When mouse is dragged, we add circles that can display a drawing
         Circle circle = new Circle(event.getX(), event.getY(), radius.getRadius(), brushColor);
-        
         drawingAreaPane.getChildren().add(circle);
     }
 

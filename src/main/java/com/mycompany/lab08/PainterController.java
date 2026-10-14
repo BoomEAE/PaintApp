@@ -6,9 +6,11 @@ package com.mycompany.lab08;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -98,10 +100,14 @@ public class PainterController implements Initializable {
 
     @FXML
     private void undoButtonPressed(ActionEvent event) {
+        //remove the latest circle
+        drawingAreaPane.getChildren().remove(drawingAreaPane.getChildren().size()-1);
     }
 
     @FXML
     private void clearButtonPressed(ActionEvent event) {
+        //Clear the drawing area
+        drawingAreaPane.getChildren().clear();
     }
 
     @FXML

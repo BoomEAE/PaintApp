@@ -20,30 +20,48 @@ import javafx.scene.layout.Pane;
  *
  * @author 2539556
  */
-public class PainterController implements Initializable {
 
-    @FXML
-    private RadioButton blackRadioBtn;
+public class PainterController implements Initializable {
+    
+    private enum PenSize {
+    SMALL(2),
+    MEDIUM(4),
+    LARGE(6);
+    
+    private final int radius;
+    
+    PenSize(int radius){this.radius = radius;}
+    
+    public int getRadius(){return radius;}
+    
+    };
+
+    
     @FXML
     private ToggleGroup colorToggleGroup;
+    @FXML
+    private RadioButton blackRadioBtn;
     @FXML
     private RadioButton redRadioBtn;
     @FXML
     private RadioButton greenRadioBtn;
     @FXML
     private RadioButton blueRadioBtn;
-    @FXML
-    private RadioButton smallRadioBtn;
+    
     @FXML
     private ToggleGroup sizeToggleGroup;
+    @FXML
+    private RadioButton smallRadioBtn;
     @FXML
     private RadioButton mediumRadioBtn;
     @FXML
     private RadioButton largeRadioBtn;
+    
     @FXML
     private Button undoBtn;
     @FXML
     private Button clearBtn;
+    
     @FXML
     private Pane drawingAreaPane;
 
